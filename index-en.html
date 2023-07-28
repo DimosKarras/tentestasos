@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>AWNINGS "TASOS"</title>
+    <link rel="icon" href="my_images/LOGO3.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            flex-shrink: 0;
+        }
+
+        /* CSS for underline animation */
+        .navbar-nav li {
+            position: relative;
+            font-weight: bold;
+        }
+
+        .navbar-nav li:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #1034a6;
+            /* Change the color as per your design */
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Apply the underline animation only to list items that do not have the "no-underline" class */
+        .navbar-nav li:not(.no-underline):hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        /* Set max height of the carousel to 200px */
+        #myCarousel {
+            max-height: 400px;
+        }
+
+        /* Make the images inside the carousel responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 400px;
+        }
+
+        /* Media queries for mobile-friendly behavior */
+        @media (max-width: 768px) {
+            .carousel-inner .col-6 {
+                width: 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* CSS to fix the carousel item width */
+        #jazdemo .carousel-inner .carousel-item {
+            width: 520px;
+            height: 400px;
+        }
+
+        #jazdemo .carousel-inner .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 678px) {
+            #myCarousel .carousel-inner .carousel-item .row {
+                flex-wrap: nowrap;
+                /* Ensure items are in a single row */
+            }
+
+            #myCarousel .carousel-inner .carousel-item .col-3 {
+                flex: 0 0 100%;
+                /* Make each item take up the full width */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start your project here-->
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+        <div class="container">
+            <a class="navbar-brand"><img id="custom-logo" src="my_images/LOGO.svg" alt="Your Logo" draggable="false"
+                    height="70" /></a>
+
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#whoweare">Who we are</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#equipment">Awnings and Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#military">Military</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item no-underline">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="flag-united-kingdom flag m-0"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="Dropdown">
+                                <li>
+                                    <a class="dropdown-item" onclick="changeLanguage('en')"><i
+                                            class="flag-united-kingdom flag"></i>English<i
+                                            class="fa fa-check text-success ms-2"></i></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" onclick="changeLanguage('el')"><i
+                                            class="flag-greece flag"></i>Ελληνικά</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar -->
+    <br class="m-4">
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col text-center" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                <h1 style="color: #1034a6;" class="display-5">ANASTASIOS PSATHAS & SONS</h1>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div id="whoweare" class="container-fluid mt-5">
+        <div class="row p-3"
+            style="background-color: #1034a6; border-bottom: 1px solid #FF5F15; border-top: 1px solid #FF5F15;">
+            <div class="col d-flex justify-content-center" style="font-weight: bold; color: white;">
+                QUALITY <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="col d-flex justify-content-center" style="font-weight: bold; color: white;">
+                AESTHETICS <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="col d-flex justify-content-center" style="font-weight: bold; color: white;">
+                FUNCTIONALITY <i class="fa-solid fa-check"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row featurette" >
+            <h2 class="mb-4 mt-4">Who we are</h2>
+            <div class="col-lg-7">
+                <p class="lead">Our Company "A. Psathas and Sons" was founded in 1960 with headquarters in the
+                    Komotini, Greece. Its object is the manufacture of all kinds of vehicle covers from laminated
+                    (coated) fabrics, as well as tents and awnings.</p>
+                <p class="lead">
+                    Our company having significant experience in the manufacture of tents and vehicle covers from
+                    laminated fabrics, and has invested huge amounts not only in the acquisition of expertise and
+                    mechanical equipment but also in the acquisition of certifications since they are a prerequisite to
+                    take part in tenders or to sign contracts. Furthermore the company has building premises that meet
+                    the production's
+                    requirements.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/20220521_110611.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg-7">
+                <p class="lead">We have traveled extensively and worked with leading companies, equipment makers and
+                    fabric suppliers in our company. This has given us valuable insights into the best practices,
+                    materials and tools for making tents and awnings. We partner with reputable European factories to
+                    source high-quality raw materials and develop innovative products.</p>
+                <p class="lead">After the investments we made, our company is located in a 1,500 m² private
+                    property, which includes offices, production areas, and storage facilities. We have state-of-the-art
+                    mechanical equipment and and highly skilled technicians.</p>
+            </div>
+            <div class="col-lg-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/IMG_2926.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+        <hr id="equipment" >
+    </div>
+
+    <h2 class="text-center">Awnings and Equipment</h2>
+
+    <div class="container mt-5">
+
+        <div class="row featurette">
+            <div class="col-lg-7 order-lg-2 justify-content-center align-items-center">
+                <h4 class="mb-4 mt-4">Curved awnings</h4>
+                <p class="lead">We make curved awnings in different styles to suit any need, from businesses to homes.
+                    All our curved awnings have a sturdy and elegant frame of aluminum with <b>electrostatically painted
+                        aluminum</b>, providing durability and a sleek finish.</p>
+                <p class="lead">They have <b>manual</b> and <b>electric</b> options for opening and closing.
+                </p>
+            </div>
+            <div class="col-lg-5 order-lg-1">
+                <div id="jazdemo" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="my_images/awnings/LN-2.jpg" alt="LN-2" class="d-block image-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="my_images/awnings/LD-2.jpg" alt="LD-2" class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="my_images/awnings/LD-3.jpg" alt="LD-3" class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="my_images/awnings/LD-6.jpg" alt="LD-6" class="d-block">
+                        </div>
+                    </div>
+
+                    <!-- Adding controls for moving slides -->
+                    <a class="carousel-control-prev" type="button" href="#jazdemo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" type="button" href="#jazdemo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg-7 order-lg-1">
+                <h4 class="mb-4 mt-4">DL 55 - DL 45</h4>
+                <p class="lead">The internationally standardized iron bar (60x60x3) is used for both anchoring to the
+                    wall and securing the components of the awning. It is affordable and strong, perfect for covering
+                    large areas with a lasting and reliable awning.</p>
+                <p class="lead">Maximum projection: 6m <br>Maximum width: 15m</p>
+                <button type="button" class="btn my-5" data-bs-toggle="modal" data-bs-target="#myModal"
+                    style="background-color: #1034a6; color: whitesmoke;">
+                    Bracket length
+                </button>
+            </div>
+            <div class="col-lg-5 order-lg-2">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/awnings/DL45-DL55.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg-7 order-lg-2">
+                <h4 class="mb-4 mt-4">AMI - ALI</h4>
+                <p class="lead">It adapts to any space, offers various options, and is easy to install.</p>
+                <p class="lead">Maximum projection: 3.50m <br>Maximum width: 15m</p>
+                <button type="button" class="btn my-5" data-bs-toggle="modal" data-bs-target="#myModal2"
+                    style="background-color: #1034a6; color: whitesmoke;">
+                    Bracket length
+                </button>
+            </div>
+            <div class="col-lg-5 order-lg-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/awnings/DL-42.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg">
+                <h4 class="mb-4 mt-4">ATTACHMENTS</h4>
+                <p class="lead">Bronze rings in all joints enhance performance and longevity.
+                </p>
+                <p class="lead">All types have a FLAYER chain of stainless steel INOX, AISI 304, with 3 to 8 links
+                    depending on the type.</p>
+                <p class="lead">All types have stainless steel screws and fasteners to prevent corrosion and last
+                    longer.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mt-3">Mechanical equipment</h2>
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-3 p-5" style="background-color: #1034a6;">
+        <div class="row g-5">
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <i class="fa fa-screwdriver-wrench fa-3x mb-3" style="color: #FF5F15;"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;"></h4>
+                    <span class="fw-semi-bold text-white">Fully equipped machine shop for the manufacture and placement
+                        of parts in covers</span>
+                </div>
+            </div>
+            <div class="col-md ">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <h1 class="mb-0" style="color: #FF5F15; font-size: 50px;">3</h1>
+                    <span class="fw-semi-bold text-white">State-of-the-art high-pressure heat sealing presses.</span>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <h1 class="mb-0" style="color: #FF5F15; font-size: 50px;">2</h1>
+                    <span class="fw-semi-bold text-white">Automatic CNC design and cutting machines</span>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <h1 class="mb-0" style="color: #FF5F15; font-size: 50px;">20</h1>
+                    <span class="fw-semi-bold text-white">Automatic electronic sewing machines for manufacturing
+                        tents</span>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <i class="fa fa-screwdriver-wrench fa-3x mb-3" style="color: #FF5F15;"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;"></h4>
+                    <span class="fw-semi-bold text-white">Numerous auxiliary machines</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <div class="container">
+        <hr id="military">
+
+        <div class="row featurette">
+            <h2  class="mb-4 mt-4">Manufacture of tank-vehicle-weapon covers</h2>
+            <div class="col-lg-7 order-lg-2">
+                <p class="lead">Our Company is based in Komotini, a strategic location for the national defense. We have
+                    been innovating with synthetic, PVC-coated fabric (or “plastic fabric”) for the Armed Forces. In
+                    1994, we were the first company to make covers for armored vehicles for the 4th Army Corps units.
+                </p>
+                <p class="lead">
+                    Due to its successful participation in public tenders, the Company has undertaken the construction
+                    of covers for armored vehicles and vehicles in numerous military units throughout the country.
+                </p>
+                <p class="lead">
+                    We use materials that meet the Hellenic Army’s standards (ΠΓΕΣ-ΚΚΥ-1305/07-2001), as confirmed by
+                    the Army’s chemical tests, ensuring they meet operational requirements. Moreover, the company
+                    represents and processes various types of PVC-coated fabrics from European manufacturers that comply
+                    with NATO's terms and specifications. European collaborations include the company "Sattler" from
+                    Austria.
+                </p>
+            </div>
+            <div class="col-lg-5 order-lg-1 d-flex justify-content-center align-items-center mt-3">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid" width="500"
+                    height="500" src="my_images/IMG_20160209_130910.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+
+        <div id="myCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="4000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+                <!-- Add more indicators here for additional slides -->
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner" id="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG-d3c2cc633037fd0d60ad863fd7b0ab8b-V.jpg" class="img-fluid"
+                                alt="Item 1">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG-d7282a788794cb747c00120b71667e64-V.jpg" class="img-fluid"
+                                alt="Item 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="my_images/IMG_3896.jpg" class="img-fluid" alt="Item 3"
+                                style="height: auto; width: 300px;">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4486.JPG" class="img-fluid" alt="Item 6">
+                        </div>
+                        <div class="col-3">
+                            <img src="my_images/IMG_20161213_132716.jpg" class="img-fluid" alt="Item 4"
+                                style="height: auto; width: 300px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG_4485.JPG" class="img-fluid" alt="Item 5">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4487.JPG" class="img-fluid" alt="Item 6">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel-item divs here for additional slides -->
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+
+        <p class="text-center lead mb-4">Over the past 25 years, we have been the leading supplier of covers to the
+            Hellenic Army, winning almost 80% of the contracts through legitimate procedures (tenders). We owe this
+            success to our superior materials and craftsmanship, as well as our affordable prices.
+        </p>
+
+        <p class="text-center lead mb-4">We also make and deliver covers for civil protection shelters, with customized
+            solutions for different weather challenges, such as storms, heat waves, and other emergencies. We guarantee
+            that our shelters are safe and dependable.</p>
+        <hr>
+    </div>
+
+    <h2 id="certifications" class="text-center">Certifications</h2>
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-3 p-5" style="background-color: #1034a6;">
+        <div class="row g-5">
+            <div class="col-md-6 col-xl-4">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 280px;">
+                    <i class="fa fa-certificate fa-3x text-white mb-3"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;">ISO 9001–2015</h4>
+                    <span class="fs-6 fw-semi-bold text-white">Quality Management System Certification</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 280px;">
+                    <i class="fa fa-stamp fa-3x text-white mb-3"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;">NATO</h4>
+                    <span class="fs-6 fw-semi-bold text-white">NATO manufacturer code</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 280px;">
+                    <i class="fa fa-certificate fa-3x text-white mb-3"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;">ΓΓΟΣΑΕ/ΓΔΑΒΕ/ΤΜΗΜΑ 1Α</h4>
+                    <span class="fs-6 fw-semi-bold text-white">Certification by the General Secretariat of Finance
+                        Planning and Defence Investments<a data-bs-toggle="popover" data-bs-trigger="hover"
+                            data-bs-content="Certification by the General Secretariat of Finance
+                            Planning and Defence Investments for its capability to manufacture tents and covers for vehicles, tanks and weapons of the Armed Forces."><i
+                                class="fa fa-circle-info text-white mb-3"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer id="contact" class="container-fluid text-white" style="background-color: #FF5F15; bottom: 0;">
+        <!-- Grid row -->
+        <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-3 d-flex justify-content-center align-items-center">
+                        <img src="my_images/LOGO3.png" alt="LOGO3" class="img-fluid" draggable="false" height="70px"
+                            width="70px">
+                    </div>
+                    <div class="col-9 d-flex justify-content-center align-items-center">
+                        <h6 class="text-uppercase fw-bold text-start">
+                            A. PSATHAS & SONS<br>
+                            INDUSTRY OF AWNINGS, COVERS & ATTACHMENTS
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">CONTACT</h6>
+                <p><small><i class="fas fa-home me-3"></i> Kosmiou - Kourtidou & Xr. Tsounta, 69100, Komotini, Greece</small>
+                </p>
+                <p><small><i class="fas fa-envelope me-3"></i> psathas@otenet.gr</small></p>
+                <p><small><i class="fas fa-phone me-3"></i> +30 (25310) 23671, 30737</small></p>
+            </div>
+            <!-- Grid column -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-12 text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); width: 100%;">
+                <small style="font-size: 12px;">© 2023 <strong>Dimos Karras</strong>. All Rights Reserved.</small>
+            </div>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+    <!-- End your project here-->
+
+    <!-- The Modal 1 -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Extra awning bar</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>DL 45</th>
+                                <th>DL 55</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3.00m</td>
+                                <td>3.00m</td>
+                            </tr>
+                            <tr>
+                                <td>3.25m</td>
+                                <td>3.25m</td>
+                            </tr>
+                            <tr>
+                                <td>3.50m</td>
+                                <td>3.50m</td>
+                            </tr>
+                            <tr>
+                                <td>3.75m</td>
+                                <td>3.75m</td>
+                            </tr>
+                            <tr>
+                                <td>4.00m</td>
+                                <td>4.00m</td>
+                            </tr>
+                            <tr>
+                                <td>4.25m</td>
+                                <td>4.25m</td>
+                            </tr>
+                            <tr>
+                                <td>4.50m</td>
+                                <td>4.50m</td>
+                            </tr>
+                            <tr>
+                                <td>4.75m</td>
+                                <td>4.75m</td>
+                            </tr>
+                            <tr>
+                                <td>5.00m</td>
+                                <td>5.00m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>5.25m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>5.50m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>5.75m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>6.00m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal 2 -->
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Classic awning bar</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>AMI</th>
+                                <th>ALI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.50m</td>
+                                <td>1.50m</td>
+                            </tr>
+                            <tr>
+                                <td>1.75m</td>
+                                <td>1.75m</td>
+                            </tr>
+                            <tr>
+                                <td>2.00m</td>
+                                <td>2.00m</td>
+                            </tr>
+                            <tr>
+                                <td>2.25m</td>
+                                <td>2.25m</td>
+                            </tr>
+                            <tr>
+                                <td>2.50m</td>
+                                <td>2.50m</td>
+                            </tr>
+                            <tr>
+                                <td>2.75m</td>
+                                <td>2.75m</td>
+                            </tr>
+                            <tr>
+                                <td>3.00m</td>
+                                <td>3.00m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>3.25m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>3.50m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+    <!-- Add this script to the bottom of your HTML body -->
+    <script>
+        function adjustCarouselStructure() {
+            var windowWidth = window.innerWidth;
+            var carouselInner = document.getElementById('carousel-inner');
+            var originalStructure = `
+        <div class="carousel-inner" id="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="my_images/IMG-d3c2cc633037fd0d60ad863fd7b0ab8b-V.jpg" class="img-fluid" alt="Item 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG-d7282a788794cb747c00120b71667e64-V.jpg" class="img-fluid" alt="Item 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_3896.jpg" class="img-fluid" alt="Item 3" style="height: auto; width: 300px; height: 400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_20161213_132716.jpg" class="img-fluid" alt="Item 4" style="height: 400px; width: 300px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_4485.jpg" class="img-fluid" alt="Item 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_4486.jpg" class="img-fluid" alt="Item 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_4487.jpg" class="img-fluid" alt="Item 7">
+                </div>
+                
+            </div>
+        `;
+
+            if (windowWidth <= 978) {
+                // Change the carousel structure for smaller screens
+                carouselInner.innerHTML = originalStructure;
+            } else {
+                // Use the original carousel structure for larger screens
+                carouselInner.innerHTML = `
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG-d3c2cc633037fd0d60ad863fd7b0ab8b-V.jpg" class="img-fluid" alt="Item 1">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG-d7282a788794cb747c00120b71667e64-V.jpg" class="img-fluid" alt="Item 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="my_images/IMG_3896.jpg" class="img-fluid" alt="Item 3" style="height: auto; width: 300px;">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4486.JPG" class="img-fluid" alt="Item 6">
+                        </div>
+                        <div class="col-3">
+                            <img src="my_images/IMG_20161213_132716.jpg" class="img-fluid" alt="Item 4" style="height: auto; width: 300px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG_4485.JPG" class="img-fluid" alt="Item 5">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4487.JPG" class="img-fluid" alt="Item 7">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel-item divs here for additional slides -->
+            `;
+            }
+        }
+
+        // Call the function on initial load and when the window is resized
+        adjustCarouselStructure();
+        window.addEventListener('resize', adjustCarouselStructure);
+    </script>
+    <script>
+        function changeLanguage(lang) {
+            const languageFiles = {
+                'en': 'index-en.html',
+                'el': 'index.html'
+            };
+
+            const currentURL = window.location.href;
+            const urlParts = currentURL.split('/');
+
+            const currentHTMLFile = urlParts[urlParts.length - 1];
+            const baseURL = currentURL.replace(currentHTMLFile, '');
+
+            const newURL = baseURL + languageFiles[lang];
+
+            window.location.href = newURL;
+        }
+    </script>
+
+
+</body>
+
+</html>

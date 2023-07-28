@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="gr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Τέντες "Ο Τάσος"</title>
+    <link rel="icon" href="my_images/LOGO3.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            flex-shrink: 0;
+        }
+
+        /* CSS for underline animation */
+        .navbar-nav li {
+            position: relative;
+            font-weight: bold;
+        }
+
+        .navbar-nav li:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #1034a6;
+            /* Change the color as per your design */
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Apply the underline animation only to list items that do not have the "no-underline" class */
+        .navbar-nav li:not(.no-underline):hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        /* Set max height of the carousel to 200px */
+        #myCarousel {
+            max-height: 400px;
+        }
+
+        /* Make the images inside the carousel responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 400px;
+        }
+
+        /* Media queries for mobile-friendly behavior */
+        @media (max-width: 768px) {
+            .carousel-inner .col-6 {
+                width: 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* CSS to fix the carousel item width */
+        #jazdemo .carousel-inner .carousel-item {
+            width: 520px;
+            height: 400px;
+        }
+
+        #jazdemo .carousel-inner .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 678px) {
+            #myCarousel .carousel-inner .carousel-item .row {
+                flex-wrap: nowrap;
+                /* Ensure items are in a single row */
+            }
+
+            #myCarousel .carousel-inner .carousel-item .col-3 {
+                flex: 0 0 100%;
+                /* Make each item take up the full width */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start your project here-->
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+        <div class="container">
+            <a class="navbar-brand"><img id="custom-logo" src="my_images/LOGO.svg" alt="Your Logo" draggable="false"
+                    height="70" /></a>
+
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#whoweare">Ποιοί είμαστε</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#equipment">Τέντες & Εξοπλισμός</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#military">Στρατός</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#certifications">Πιστοποιήσεις</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#contact">Επικοινωνία</a>
+                    </li>
+                    <li class="nav-item no-underline">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="flag-greece flag m-0"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="Dropdown">
+                                <li>
+                                    <a class="dropdown-item" onclick="changeLanguage('el')">
+                                        <i class="flag-greece flag"></i>Ελληνικά<i
+                                            class="fa fa-check text-success ms-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" onclick="changeLanguage('en')">
+                                        <i class="flag-united-kingdom flag"></i>English
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar -->
+    <br class="m-4">
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col text-center" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                <h1 style="color: #1034a6;" class="display-5">ΑΝΑΣΤΑΣΙΟΣ ΨΑΘΑΣ & ΥΙΟΙ Ο.Ε</h1>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div id="whoweare" class="container-fluid mt-5">
+        <div class="row p-3"
+            style="background-color: #1034a6; border-bottom: 1px solid #FF5F15; border-top: 1px solid #FF5F15;">
+            <div class="col d-flex justify-content-center" style="font-weight: bold; color: white;">
+                ΠΟΙΟΤΗΤΑ <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="col d-flex justify-content-center" style="font-weight: bold; color: white;">
+                ΑΙΣΘΗΤΙΚΗ <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="col d-flex justify-content-center" style="font-weight: bold; color: white;">
+                ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑ <i class="fa-solid fa-check"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row featurette">
+            <h2 class="mb-4 mt-4">Ποιοί είμαστε</h2>
+            <div class="col-lg-7">
+                <p class="lead">Η Εταιρεία μας «ΑΝ. ΨΑΘΑΣ ΚΑΙ ΥΙΟΙ Ο.Ε.» ιδρύθηκε το 1960 με έδρα στην ευαίσθητη περιοχή
+                    της Θράκης και ειδικότερα στην Κομοτηνή και έχει ως αντικείμενο την κατασκευή πάσης φύσεως
+                    καλυμμάτων οχημάτων από πλαστικοποιημένα (επικαλυμμένα) υφάσματα, καθώς και σκηνών και τεντών.</p>
+                <p class="lead">
+                    Η εταιρία μας έχοντας σημαντική εμπειρία στην κατασκευή σκηνών και καλυμμάτων οχημάτων από
+                    πλαστικοποιημένα υφάσματα λόγω αντικειμένου και προκειμένου να προσαρμοστεί στις σύγχρονες
+                    απαιτήσεις , σ’ ότι αφορά στην κατασκευή σκηνών και καλυμμάτων , επένδυσε τεράστια ποσά αφενός μεν
+                    στην απόκτηση τεχνογνωσίας και μηχανολογικού εξοπλισμού και σε απόκτηση πιστοποιήσεων αφού είναι
+                    προϋπόθεση για να μπορούμε να πάρουμε μέρος σε διαγωνισμούς ή να υπογράψουμε συμβάσεις , αφετέρου δε
+                    σε κτιριακές εγκαταστάσεις που να ικανοποιούν τις απαιτήσεις παραγωγής.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/20220521_110611.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg-7">
+                <p class="lead">Με συνεχή ταξίδια στο εξωτερικό και επαφή με ομοειδείς εταιρείες του χώρου αλλά και
+                    κατασκευαστές αντίστοιχου μηχανολογικού εξοπλισμού καθώς και επικαλυμμένων υφασμάτων, αποκτήσαμε
+                    τεράστια εμπειρία σ’ ότι αφορά στην παραγωγική διαδικασία για την κατασκευή σκηνών και καλυμμάτων,
+                    στην ποιότητα των χρησιμοποιούμενων πρώτων υλών αλλά και στον σύγχρονο εξοπλισμό που απαιτείται για
+                    την παραγωγή. Συνεργαζόμαστε με αναγνωρισμένα εργοστάσια στην Ευρώπη για την έρευνα και αγορά πρώτων
+                    υλών, καθώς και το σχεδιασμό και τη δημιουργία νέων προϊόντων.</p>
+                <p class="lead">Η εταιρεία μας μετά τις επενδύσεις που πραγματοποίησε είναι εγκατεστημένη σε ιδιόκτητο
+                    χώρο 1.500 m² (γραφεία, παραγωγικά τμήματα και αποθηκευτικοί χώροι) διαθέτει μηχανολογικό εξοπλισμό
+                    τελευταίας τεχνολογίας και άριστη τεχνογνωσία.</p>
+            </div>
+            <div class="col-lg-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/IMG_2926.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+        <hr id="equipment">
+    </div>
+
+    <h2 class="text-center mt-5">Τέντες & Εξοπλισμός</h2>
+
+    <div class="container mt-4">
+
+        <div class="row featurette">
+            <div class="col-lg-7 order-lg-2 justify-content-center align-items-center">
+                <h4 class="mb-4 mt-4">Καμπύλες τέντες</h4>
+                <p class="lead">Οι καμπύλες τέντες κατασκευάζονται σε διάφορους τύπους ούτως ώστε να ανταποκρίνονται σε
+                    όλες τις απαιτήσεις ώστε να εξασφαλίζουν τις καλύτερες λύσεις είτε για καταστήματα είτε για
+                    κατοικίες. Σε όλους τους τύπους καμπύλης τέντας ο σκελετός είναι από <b>αλουμίνιο ηλεκτροστατικά
+                        βαμμένο</b>.</p>
+                <p class="lead">Υπάρχει η δυνατότητα για <b>χειροκίνητο</b> και <b>ηλεκτρικό</b> άνοιγμα και κλείσιμο.
+                </p>
+            </div>
+            <div class="col-lg-5 order-lg-1">
+                <div id="jazdemo" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="my_images/awnings/LN-2.jpg" alt="LN-2" class="d-block image-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="my_images/awnings/LD-2.jpg" alt="LD-2" class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="my_images/awnings/LD-3.jpg" alt="LD-3" class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="my_images/awnings/LD-6.jpg" alt="LD-6" class="d-block">
+                        </div>
+                    </div>
+
+                    <!-- Adding controls for moving slides -->
+                    <a class="carousel-control-prev" type="button" href="#jazdemo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" type="button" href="#jazdemo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg-7 order-lg-1">
+                <h4 class="mb-4 mt-4">DL 55 - DL 45</h4>
+                <p class="lead">Η διεθνών προδιαγραφών σιδερένια μπάρα (60x60x3), τόσο για την στερέωση στον τοίχο, όσο
+                    και για την στερέωση των εξαρτημάτων της τέντας. Η λογική τιμή και η ενισχυμένη κατασκευή την κάνουν
+                    ιδανική τέντα για μεγάλες επιφάνειες.</p>
+                <p class="lead">Μέγιστη προβολή: 6m <br>Μέγιστο πλάτος: 15m</p>
+                <button type="button" class="btn my-5" data-bs-toggle="modal" data-bs-target="#myModal"
+                    style="background-color: #1034a6; color: whitesmoke;">
+                    Μήκος Βραχίονα
+                </button>
+            </div>
+            <div class="col-lg-5 order-lg-2">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/awnings/DL45-DL55.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg-7 order-lg-2">
+                <h4 class="mb-4 mt-4">AMI - ALI</h4>
+                <p class="lead">Τέλεια εφαρμογή, δίνει πολλές λύσεις, με μεγάλη ευκολία στην τοποθέτηση.</p>
+                <p class="lead">Μέγιστη προβολή: 3.50m <br>Μέγιστο πλάτος: 15m</p>
+                <button type="button" class="btn my-5" data-bs-toggle="modal" data-bs-target="#myModal2"
+                    style="background-color: #1034a6; color: whitesmoke;">
+                    Μήκος Βραχίονα
+                </button>
+            </div>
+            <div class="col-lg-5 order-lg-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="my_images/awnings/DL-42.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-lg">
+                <h4 class="mb-4 mt-4">ΕΞΑΡΤΗΜΑΤΑ</h4>
+                <p class="lead">Σε όλες τις αρθρώσεις υπάρχουν μπρούντζινα δαχτυλίδια για καλύτερη λειτουργεία και
+                    μεγαλύτερη αντοχή.
+                </p>
+                <p class="lead">Σε όλους τους τύπους η καδένα είναι απο ατσάλι INOX, AISI 304 τύπου FLAYER (με 3 έως και
+                    8 κρίκους ανάλογα με τον τύπο).</p>
+                <p class="lead">Σε όλους τους τύπους για μεγαλύτερη εγγύηση και διάρκεια στο χρόνο, όλες οι βίδες και τα
+                    παξιμάδια που υποβάλλονται σε πιθανό κίνδυνο διάβρωσης είναι ανοξείδοτα.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mt-3">Μηχανολογικός εξοπλισμός</h2>
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-3 p-5" style="background-color: #1034a6;">
+        <div class="row g-5">
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <i class="fa fa-screwdriver-wrench fa-3x mb-3" style="color: #FF5F15;"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;"></h4>
+                    <span class="fw-semi-bold text-white">Πλήρως εξοπλισμένο μηχανουργείο για την κατασκευή και
+                        τοποθέτηση απαρτίων σε καλύμματα</span>
+                </div>
+            </div>
+            <div class="col-md ">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <h1 class="mb-0" style="color: #FF5F15; font-size: 50px;">3</h1>
+                    <span class="fw-semi-bold text-white">Υψίσυχνες θερμοκολλητικές πρέσες τελευταίας τεχνολογίας</span>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <h1 class="mb-0" style="color: #FF5F15; font-size: 50px;">2</h1>
+                    <span class="fw-semi-bold text-white">Αυτόματα σχεδιαστικά και κοπτικά μηχανήματα CNC</span>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <h1 class="mb-0" style="color: #FF5F15; font-size: 50px;">20</h1>
+                    <span class="fw-semi-bold text-white">Αυτόματες ηλεκτρονικές ραπτικές μηχανές για την κατασκευή
+                        τεντών</span>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 320px;">
+                    <i class="fa fa-screwdriver-wrench fa-3x mb-3" style="color: #FF5F15;"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;"></h4>
+                    <span class="fw-semi-bold text-white">Πλήθος βοηθητικών μηχανημάτων</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <div class="container">
+        <hr id="military" >
+
+        <div class="row featurette">
+            <h2 class="mb-4 mt-4">Κατασκευή καλύμμάτων αρμάτων - οχημάτων - όπλων</h2>
+            <div class="col-lg-7 order-lg-2">
+                <p class="lead">Η Εταιρεία εδρεύει στην εθνικά ευαίσθητη περιοχή της Κομοτηνής και είναι πρωτοπόρος στη
+                    χρησιμοποίηση συνθετικού, επικαλυμμένου με PVC, υφάσματος, ("πλαστικού υφάσματος") στις Ένοπλες
+                    Δυνάμεις. Είμαστε η πρώτη εταιρεία που ανέλαβε την κατασκευή καλυμμάτων αρμάτων για τις μονάδες του
+                    Δ' Σώματος Στρατού το 1994.</p>
+                <p class="lead">
+                    Με δεδομένη την επιτυχή συμμετοχή της σε δημόσιους μειοδοτικούς διαγωνισμούς, έχει αναλάβει την
+                    κατασκευή καλυμμάτων αρμάτων και οχημάτων σε πλήθος στρατιωτικών μονάδων ανά την επικράτεια της
+                    χώρας.
+                </p>
+                <p class="lead">
+                    Το υλικό που χρησιμοποιείται είναι σύμφωνο με την προδιαγραφή ΓΕΣ (ΠΓΕΣ-ΚΚΥ-1305/07-2001), όπως
+                    προκύπτει απο τα δελτία χημικής εξέτασης του Στρατού για την κάλυψη των επιχειρησιακών απαιτήσεων.
+                    Αντιπροσωπεύει και επεξεργάζεται διαφόρων ειδών πλαστικοποιημένα υφάσματα με PVC από ευρωπαϊκούς
+                    οίκους, που πληρούν τους όρους και τις προδιαγραφές του ΝΑΤΟ. Οι ευρωπαϊκές συνεργασίες
+                    περιλαμβάνουν τις εταιρείες "Sattler" (Αυστρία).
+                </p>
+            </div>
+            <div class="col-lg-5 order-lg-1 d-flex justify-content-center align-items-center mt-3">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid" width="500"
+                    height="500" src="my_images/IMG_20160209_130910.jpg" alt="Placeholder: 500x500">
+            </div>
+        </div>
+
+
+        <div id="myCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="4000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+                <!-- Add more indicators here for additional slides -->
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner" id="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG-d3c2cc633037fd0d60ad863fd7b0ab8b-V.jpg" class="img-fluid"
+                                alt="Item 1">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG-d7282a788794cb747c00120b71667e64-V.jpg" class="img-fluid"
+                                alt="Item 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="my_images/IMG_3896.jpg" class="img-fluid" alt="Item 3"
+                                style="height: auto; width: 300px;">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4486.JPG" class="img-fluid" alt="Item 6">
+                        </div>
+                        <div class="col-3">
+                            <img src="my_images/IMG_20161213_132716.jpg" class="img-fluid" alt="Item 4"
+                                style="height: auto; width: 300px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG_4485.JPG" class="img-fluid" alt="Item 5">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4487.JPG" class="img-fluid" alt="Item 6">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel-item divs here for additional slides -->
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+
+        <p class="text-center lead mb-4">Τα τελευταία 25 χρόνια έχουμε κατασκευάσει το <b>80% σχεδόν των καλυμμάτων που
+                έχει προμηθευτεί ο Ελληνικός Στρατός για όλες τις Μονάδες του</b>, με τις νόμιμες διαδικασίες
+            (διαγωνισμούς), με δεδομένο ότι η ποιότητα των πρώτων υλών και της κατασκευής των καλυμμάτων αλλά και οι
+            τιμές που προσφέραμε, ήταν ασυναγώνιστες.
+        </p>
+
+        <p class="text-center lead mb-4">Επιπλέον, έχουμε αναλάβει την παραγωγή και παροχή καλυμμάτων για <b>σκηνές
+                πολιτικής προστασίας</b>, προσφέροντας εξειδικευμένες λύσεις για προστασία από διάφορες καιρικές
+            συνθήκες, όπως εκτεταμένες βροχοπτώσεις, υψηλές θερμοκρασίες και άλλα ακραία φαινόμενα. Εξασφαλίζουμε ότι οι
+            σκηνές μας πληρούν όλα τα πρότυπα ασφαλείας και προσφέρουν ένα αξιόπιστο και ασφαλές περιβάλλον.</p>
+        <hr id="certifications" >
+    </div>
+
+    <h2 class="text-center">Πιστοποιήσεις</h2>
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-3 p-5" style="background-color: #1034a6;">
+        <div class="row g-5">
+            <div class="col-md-6 col-xl-4">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 280px;">
+                    <i class="fa fa-certificate fa-3x text-white mb-3"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;">ISO 9001–2015</h4>
+                    <span class="fs-6 fw-semi-bold text-white">Πιστοποίηση Συστήματος Διαχείρισης Ποιότητας</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 280px;">
+                    <i class="fa fa-stamp fa-3x text-white mb-3"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;">NATO</h4>
+                    <span class="fs-6 fw-semi-bold text-white">Κωδικό κατασκευαστή κατά ΝΑΤΟ</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="text-center border p-5 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 280px;">
+                    <i class="fa fa-certificate fa-3x text-white mb-3"></i>
+                    <h4 class="mb-0" style="color: #FF5F15;">ΓΓΟΣΑΕ/ΓΔΑΒΕ/ΤΜΗΜΑ 1Α</h4>
+                    <span class="fs-6 fw-semi-bold text-white">Πιστοποίηση από την Γενική Γραμματεία Οικονομικού
+                        Σχεδιασμού και Αμυντικών Επενδύσεων <a data-bs-toggle="popover" data-bs-trigger="hover"
+                            data-bs-content="Πιστοποίηση από την Γενική Γραμματεία Οικονομικού
+                        Σχεδιασμού και Αμυντικών Επενδύσεων για την δυνατότητά της να κατασκευάζει
+                        σκηνές και καλύμματα οχημάτων, αρμάτων και όπλων των Ενόπλων Δυνάμεων."><i
+                                class="fa fa-circle-info text-white mb-3"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer id="contact" class="container-fluid text-white" style="background-color: #FF5F15; bottom: 0;">
+        <!-- Grid row -->
+        <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <div class="row">
+                    <div class="col-3 d-flex justify-content-center align-items-center">
+                        <img src="my_images/LOGO3.png" alt="LOGO3" class="img-fluid" draggable="false" height="70px"
+                            width="70px">
+                    </div>
+                    <div class="col-9 d-flex justify-content-center align-items-center">
+                        <h6 class="text-uppercase fw-bold text-start">
+                            Α. ΨΑΘΑΣ ΚΑΙ ΥΙΟΙ Ο.Ε<br>
+                            ΒΙΟΤΕΧΝΙΑ ΤΕΝΤΩΝ, ΚΑΛΥΜΜΑΤΩΝ & ΕΞΑΡΤΗΜΑΤΩΝ
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">ΕΠΙΚΟΙΝΩΝΙΑ</h6>
+                <p><small><i class="fas fa-home me-3"></i> Κοσμίου - Κουρτίδου & Χρ. Τσούντα, 69100, Κομοτηνή</small>
+                </p>
+                <p><small><i class="fas fa-envelope me-3"></i> psathas@otenet.gr</small></p>
+                <p><small><i class="fas fa-phone me-3"></i> (25310) 23671, 30737</small></p>
+            </div>
+            <!-- Grid column -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-12 text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); width: 100%;">
+                <small style="font-size: 12px;">© 2023 <strong>Dimos Karras</strong>. All Rights Reserved.</small>
+            </div>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+    <!-- End your project here-->
+
+    <!-- The Modal 1 -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Extra μπάρα τέντας</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>DL 45</th>
+                                <th>DL 55</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3.00m</td>
+                                <td>3.00m</td>
+                            </tr>
+                            <tr>
+                                <td>3.25m</td>
+                                <td>3.25m</td>
+                            </tr>
+                            <tr>
+                                <td>3.50m</td>
+                                <td>3.50m</td>
+                            </tr>
+                            <tr>
+                                <td>3.75m</td>
+                                <td>3.75m</td>
+                            </tr>
+                            <tr>
+                                <td>4.00m</td>
+                                <td>4.00m</td>
+                            </tr>
+                            <tr>
+                                <td>4.25m</td>
+                                <td>4.25m</td>
+                            </tr>
+                            <tr>
+                                <td>4.50m</td>
+                                <td>4.50m</td>
+                            </tr>
+                            <tr>
+                                <td>4.75m</td>
+                                <td>4.75m</td>
+                            </tr>
+                            <tr>
+                                <td>5.00m</td>
+                                <td>5.00m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>5.25m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>5.50m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>5.75m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>6.00m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal 2 -->
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Κλασσική μπάρα τέντας</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th>AMI</th>
+                                <th>ALI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.50m</td>
+                                <td>1.50m</td>
+                            </tr>
+                            <tr>
+                                <td>1.75m</td>
+                                <td>1.75m</td>
+                            </tr>
+                            <tr>
+                                <td>2.00m</td>
+                                <td>2.00m</td>
+                            </tr>
+                            <tr>
+                                <td>2.25m</td>
+                                <td>2.25m</td>
+                            </tr>
+                            <tr>
+                                <td>2.50m</td>
+                                <td>2.50m</td>
+                            </tr>
+                            <tr>
+                                <td>2.75m</td>
+                                <td>2.75m</td>
+                            </tr>
+                            <tr>
+                                <td>3.00m</td>
+                                <td>3.00m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>3.25m</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>3.50m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+    <!-- Add this script to the bottom of your HTML body -->
+    <script>
+        function adjustCarouselStructure() {
+            var windowWidth = window.innerWidth;
+            var carouselInner = document.getElementById('carousel-inner');
+            var originalStructure = `
+        <div class="carousel-inner" id="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="my_images/IMG-d3c2cc633037fd0d60ad863fd7b0ab8b-V.jpg" class="img-fluid" alt="Item 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG-d7282a788794cb747c00120b71667e64-V.jpg" class="img-fluid" alt="Item 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_3896.jpg" class="img-fluid" alt="Item 3" style="height: auto; width: 300px; height: 400px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_20161213_132716.jpg" class="img-fluid" alt="Item 4" style="height: 400px; width: 300px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_4485.jpg" class="img-fluid" alt="Item 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_4486.jpg" class="img-fluid" alt="Item 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="my_images/IMG_4487.jpg" class="img-fluid" alt="Item 7">
+                </div>
+                
+            </div>
+        `;
+
+            if (windowWidth <= 978) {
+                // Change the carousel structure for smaller screens
+                carouselInner.innerHTML = originalStructure;
+            } else {
+                // Use the original carousel structure for larger screens
+                carouselInner.innerHTML = `
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG-d3c2cc633037fd0d60ad863fd7b0ab8b-V.jpg" class="img-fluid" alt="Item 1">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG-d7282a788794cb747c00120b71667e64-V.jpg" class="img-fluid" alt="Item 2">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="my_images/IMG_3896.jpg" class="img-fluid" alt="Item 3" style="height: auto; width: 300px;">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4486.JPG" class="img-fluid" alt="Item 6">
+                        </div>
+                        <div class="col-3">
+                            <img src="my_images/IMG_20161213_132716.jpg" class="img-fluid" alt="Item 4" style="height: auto; width: 300px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="my_images/IMG_4485.JPG" class="img-fluid" alt="Item 5">
+                        </div>
+                        <div class="col-6">
+                            <img src="my_images/IMG_4487.JPG" class="img-fluid" alt="Item 7">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel-item divs here for additional slides -->
+            `;
+            }
+        }
+
+        // Call the function on initial load and when the window is resized
+        adjustCarouselStructure();
+        window.addEventListener('resize', adjustCarouselStructure);
+    </script>
+
+    <script>
+        function changeLanguage(lang) {
+            const languageFiles = {
+                'en': 'index-en.html',
+                'el': 'index.html'
+            };
+
+            const currentURL = window.location.href;
+            const urlParts = currentURL.split('/');
+
+            const currentHTMLFile = urlParts[urlParts.length - 1];
+            const baseURL = currentURL.replace(currentHTMLFile, '');
+
+            const newURL = baseURL + languageFiles[lang];
+
+            window.location.href = newURL;
+        }
+    </script>
+
+</body>
+
+</html>
